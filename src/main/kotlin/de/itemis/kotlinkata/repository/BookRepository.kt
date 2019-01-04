@@ -23,5 +23,8 @@ class BookRepository {
         return findAll()
     }
 
+    fun findLimitBooks(limit: Int): List<Book> {
+        return findAll().subList(0, limit)
+    }
 
 }

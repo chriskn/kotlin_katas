@@ -18,7 +18,7 @@ class ValueClassTest {
      * Hint: You can take a look at the class [de.itemis.kotlinkata.domain.Book]
      */
     @Test
-    fun shouldFindAllAuthors(){
+    fun shouldFindAllAuthors() {
         var authors = repository.findAll()
         assertThat(authors.map { it.getLastName() }).contains("Miller")
     }
@@ -40,7 +40,7 @@ class ValueClassTest {
     }
 
     /**
-     * Another generated method for a data class is copy().
+     * Task 3: Another generated method for a data class is copy().
      * Is also supports to copy all attributes but at the same time alter one or multiple attributes during copy.
      * Extend the following test to make it pass without chaning any production code.
      */
