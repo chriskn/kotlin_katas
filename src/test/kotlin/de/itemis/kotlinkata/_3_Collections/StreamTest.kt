@@ -1,4 +1,4 @@
-package de.itemis.kotlinkata.`2_Collections`
+package de.itemis.kotlinkata._3_Collections
 
 import de.itemis.kotlinkata.domain.Book
 import de.itemis.kotlinkata.repository.BookRepository
@@ -10,7 +10,7 @@ class StreamTest {
     val bookRepository = BookRepository()
 
     /**
-     * Task 2.1: Try your stream skills
+     * Task 1: Try your stream skills
      * Extend the method [de.itemis.kotlinkata.repository.BookRepository.findByAuthor]
      * by using streams.
      */
@@ -22,7 +22,7 @@ class StreamTest {
     }
 
     /**
-     * Task 2.2: Extended streams
+     * Task 2: Extended streams
      * Extend the method [de.itemis.kotlinkata.repository.BookRepository.findAllInOrder]
      * by using streams to return the books in alphabetic order
      */

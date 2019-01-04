@@ -1,3 +1,5 @@
+package de.itemis.kotlinkata._1_Test
+
 class BookRepositoryTest {
 
     /**
