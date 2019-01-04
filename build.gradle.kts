@@ -27,6 +27,7 @@ dependencies {
     testCompile("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "junit")
     }
+    testCompile("org.assertj:assertj-core")
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
