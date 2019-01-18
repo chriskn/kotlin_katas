@@ -3,19 +3,18 @@ package de.itemis.kotlinkata.client
 import de.itemis.kotlinkata.domain.Author
 import kotlinx.coroutines.*
 import java.util.concurrent.LinkedBlockingDeque
-import kotlin.collections.sumBy
 import kotlin.concurrent.thread
 
 class AuthorClient {
 
     fun getAuthorsById(ids: List<Int>) : List<Author> {
-        val c = LinkedBlockingDeque<Author>()
+        val que = LinkedBlockingDeque<Author>()
         for (id in ids){
             thread(start = true) {
                 val author = getAuthorById(id)
-                c.addLast(author)            }
+                que.addLast(author)            }
         }
-        return c.toList()
+        return que.toList()
     }
 
     fun registerForEvents(ids: List<Int>)  = runBlocking {
