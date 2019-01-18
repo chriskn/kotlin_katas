@@ -24,6 +24,7 @@ val test by tasks.getting(Test::class) {
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib") // Required for Kotlin integration
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile(group = "org.jetbrains.kotlinx", name= "kotlinx-coroutines-core", version= "1.1.0") // Required for coroutines
     testCompile("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "junit")
     }
