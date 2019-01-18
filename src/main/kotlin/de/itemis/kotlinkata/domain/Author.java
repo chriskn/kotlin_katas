@@ -20,4 +20,8 @@ public class Author {
     public String getLastName() {
         return lastName;
     }
+
+    public Author copy() {
+        return new Author(this.firstName, this.lastName);
+    }
 }

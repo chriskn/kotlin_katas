@@ -1,11 +1,8 @@
-## Spring Boot Example
+## Kotlin Craftsman Exercise
 
-This is a basic example of how to use Kotlin in a Spring Boot application. See the [accompanying tutorial](http://kotlinlang.org/docs/tutorials/spring-boot-restful.html)
-for more information.
+This is a collection of tasks for getting started with Kotlin Development.
+Checkout the repo and take a look in the folder `src/test/kotlin`
 
-To run:
+The tasks are described as comments in each test class.
 
-```
-$ ./gradlew bootRun
-```
-
+Have fun!
