@@ -18,7 +18,7 @@ class StreamTest {
     fun shouldFilterByAuthorName() {
         val author = "Miller"
         val books = bookRepository.findByAuthor(author)
-        assertThat(books).containsExactly(Book(author,""))
+        assertThat(books.map { it.author }).containsExactly(author)
     }
 
     /**
@@ -27,12 +27,21 @@ class StreamTest {
      * by using streams to return the books in alphabetic order
      */
     @Test
-    fun shouldFindAllBooksInAlphabeticOrder(){
+    fun shouldFindAllBooksInAlphabeticOrder() {
+        initBooks()
+
         val books = bookRepository.findAllInOrder()
 
         val titles = books.map { book -> book.title }
-        val sortedTitles = arrayOf("A Small History Of Kotlin", "Start With Kotlin Today")
+        val sortedTitles = listOf("A Small History Of Kotlin", "Start With Kotlin Today")
         assertThat(titles).isEqualTo(sortedTitles)
+    }
+
+    private fun initBooks() {
+        val library: MutableList<Book> = ArrayList()
+        library.add(Book("Smith", "Start With Kotlin Today"))
+        library.add(Book("Miller", "A Small History Of Kotlin"))
+        bookRepository.library = library
     }
 
 }

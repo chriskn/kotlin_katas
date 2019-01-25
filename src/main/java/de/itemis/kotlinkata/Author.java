@@ -1,4 +1,4 @@
-package de.itemis.kotlinkata.domain;
+package de.itemis.kotlinkata;
 
 /**
  * Replace me by a kotlin data class

@@ -1,6 +1,6 @@
 package de.itemis.kotlinkata._2_ValueClasses
 
-import de.itemis.kotlinkata.domain.Author
+import de.itemis.kotlinkata.Author
 import de.itemis.kotlinkata.repository.AuthorRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
@@ -42,7 +42,7 @@ class ValueClassTest {
     /**
      * Task 3: Another generated method for a data class is copy().
      * Is also supports to copy all attributes but at the same time alter one or multiple attributes during copy.
-     * Extend the following test to make it pass without chaning any production code.
+     * Extend the following test to make it pass without changing any production code.
      */
     @Test
     fun shouldGiveYouACopyFunction() {

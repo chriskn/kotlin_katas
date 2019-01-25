@@ -9,7 +9,7 @@ class DelegationPatternTest {
     /**
      * Kotlin eases the implementation of the Delegation pattern.
      * Take a look at [de.itemis.kotlinkata.repository.MagazinRepository].
-     * It uses a BookRepository and delegates all function exept for getName() to
+     * It uses a BookRepository and delegates all function except for getName() to
      * the repository. Kotlin supports a much cleaner syntax. Try to keep this test
      * passed while removing all functions from the MagazinRepository except for the
      * getName() function.

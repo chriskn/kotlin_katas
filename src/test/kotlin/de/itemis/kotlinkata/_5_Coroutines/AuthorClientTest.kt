@@ -39,7 +39,7 @@ class AuthorClientTest {
      * the expected amount of authors.
      *
      * Make sure [AuthorClient.getAuthorsById] returns all authors by awaiting the result.
-     * Therefore join all jobs in a blocking block.
+     * Therefore, join all jobs in a blocking block.
      */
     @Test
     fun test_getAuthorsById_returns_all_authors() {
