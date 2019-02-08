@@ -1,6 +1,6 @@
 package de.itemis.kotlinkata.repository
 
-import de.itemis.kotlinkata.domain.Author
+import de.itemis.kotlinkata.Author
 
 class AuthorRepository {
 

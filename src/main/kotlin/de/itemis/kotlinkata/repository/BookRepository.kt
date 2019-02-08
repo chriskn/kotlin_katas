@@ -5,7 +5,7 @@ import de.itemis.kotlinkata.domain.Book
 
 class BookRepository : BookRepositoryInterface {
 
-    val library: MutableList<Book> = ArrayList()
+    var library: MutableList<Book> = ArrayList()
 
     constructor() {
         library.add(Book("Smith", "Start With Kotlin Today"))

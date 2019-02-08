@@ -50,7 +50,7 @@ class AuthorClientTest {
 
     /**
      * Task 3: Run coroutines asynchronous
-     * The method [AuthorClient.registerForEvents] is also to slow.
+     * The method [AuthorClient.registerForEvents] is also too slow.
      * The registration is currently called synchronous which is not needed.
      *
      * You task is to change [AuthorClient.registerForEvents] to run asynchronous
@@ -74,10 +74,10 @@ class AuthorClientTest {
      * status code from the asynchronous call for each author id.
      * Uncomment this test and make it pass.
      */
-//    @Test
-//    fun test_registerForEvents_return_status_codes() {
-//        val statusCodes = client.registerForEvents((1..5).toList())
-//        assertThat(statusCodes.size).isEqualTo(5)
-//    }
+    @Test
+    fun test_registerForEvents_return_status_codes() {
+        val statusCodes = client.registerForEvents((1..5).toList())
+        assertThat(statusCodes.size).isEqualTo(5)
+    }
 
 }

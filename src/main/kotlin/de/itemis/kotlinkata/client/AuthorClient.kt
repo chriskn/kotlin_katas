@@ -1,26 +1,38 @@
 package de.itemis.kotlinkata.client
 
-import de.itemis.kotlinkata.domain.Author
+import de.itemis.kotlinkata.Author
 import kotlinx.coroutines.*
 import java.util.concurrent.LinkedBlockingDeque
-import kotlin.concurrent.thread
 
 class AuthorClient {
 
-    fun getAuthorsById(ids: List<Int>) : List<Author> {
+    fun getAuthorsById(ids: List<Int>): List<Author> {
         val que = LinkedBlockingDeque<Author>()
-        for (id in ids){
-            thread(start = true) {
-                val author = getAuthorById(id)
-                que.addLast(author)            }
+
+        for (id in ids) {
+            runBlocking {
+                var job = GlobalScope.launch {
+                    val author = getAuthorById(id)
+                    que.addLast(author)
+
+                }
+                job.join()
+            }
+
         }
         return que.toList()
     }
 
-    fun registerForEvents(ids: List<Int>)  = runBlocking {
-        for (id in ids) {
-            registerForEvents(id)
+    fun registerForEvents(ids: List<Int>): List<Int> {
+        var statusCodes: MutableList<Int> = ArrayList()
+        runBlocking {
+            for (id in ids) {
+                statusCodes.add(GlobalScope.async {
+                    registerForEvents(id)
+                }.await())
+            }
         }
+        return statusCodes
     }
 
     /**
@@ -39,5 +51,4 @@ class AuthorClient {
         delay(1000L)
         return 200;
     }
-
 }
