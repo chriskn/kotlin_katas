@@ -1,6 +1,6 @@
 package de.itemis.kotlinkata._2_ValueClasses
 
-import de.itemis.kotlinkata.Author
+import de.itemis.kotlinkata.domain.Author
 import de.itemis.kotlinkata.repository.AuthorRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
