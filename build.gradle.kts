@@ -22,9 +22,10 @@ val test by tasks.getting(Test::class) {
 }
 
 dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2") // Required for coroutines
     compile("org.jetbrains.kotlin:kotlin-stdlib") // Required for Kotlin integration
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile(group = "org.jetbrains.kotlinx", name= "kotlinx-coroutines-core", version= "1.3.2") // Required for coroutines
+    compile ("org.jetbrains.kotlin:kotlin-reflect")
     testCompile("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "junit")
     }
