@@ -1,4 +1,4 @@
-package de.chriskn.kotlinkata._4_DelegationPattern
+package de.chriskn.kotlinkata._3_DelegationPattern
 
 import de.chriskn.kotlinkata.repository.MagazinRepository
 import org.assertj.core.api.Assertions.assertThat

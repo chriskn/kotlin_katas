@@ -1,4 +1,4 @@
-package de.chriskn.kotlinkata._3_Collections
+package de.chriskn.kotlinkata._4_Collections
 
 import de.chriskn.kotlinkata.domain.Book
 import de.chriskn.kotlinkata.repository.BookRepository
@@ -13,6 +13,8 @@ class StreamTest {
      * Task 1: Try your stream skills
      * Extend the method [de.itemis.kotlinkata.repository.BookRepository.findByAuthor]
      * by using streams.
+     *
+     * See https://kotlinlang.org/docs/reference/collection-filtering.html
      */
     @Test
     fun shouldFilterByAuthorName() {
@@ -25,6 +27,8 @@ class StreamTest {
      * Task 2: Extended streams
      * Extend the method [de.itemis.kotlinkata.repository.BookRepository.findAllInOrder]
      * by using streams to return the books in alphabetic order
+     *
+     * See https://kotlinlang.org/docs/reference/collection-ordering.html
      */
     @Test
     fun shouldFindAllBooksInAlphabeticOrder() {

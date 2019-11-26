@@ -1,11 +1,14 @@
-package de.chriskn.kotlinkata._2_ValueClasses
+package de.chriskn.kotlinkata._2_DataClasses
 
 import de.chriskn.kotlinkata.domain.Author
 import de.chriskn.kotlinkata.repository.AuthorRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
-class ValueClassTest {
+/**
+ * See https://kotlinlang.org/docs/reference/data-classes.html
+ */
+class DataClassTest {
 
     val repository = AuthorRepository()
     var author = Author("Peter", "Miller")
@@ -14,8 +17,9 @@ class ValueClassTest {
      * Task 1: Data Class
      * [https://kotlinlang.org/docs/reference/data-classes.html]
      * Kotlin has its own syntax for data classes, which are purely for storing data in your domain model
-     * In this task you need to replace the [de.itemis.kotlinkata.domain.Author] class by an kotlin data class
+     * In this task you need to replace the [de.itemis.kotlinkata.domain.Author] java class by an kotlin data class
      * Hint: You can take a look at the class [de.itemis.kotlinkata.domain.Book]
+     * Make sure the test uses the new class and still works.
      */
     @Test
     fun shouldFindAllAuthors() {
