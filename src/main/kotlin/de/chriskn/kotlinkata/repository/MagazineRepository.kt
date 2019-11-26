@@ -2,9 +2,9 @@ package de.chriskn.kotlinkata.repository
 
 import de.chriskn.kotlinkata.domain.Book
 
-class MagazineRepositoryI : `IBookRepository.kt` {
+class MagazineRepositoryI : IBookRepository {
 
-    val repository = `IBookRepository.kt`()
+    val repository = BookRepository()
 
     override fun findAll(): List<Book> {
         return repository.findAll()

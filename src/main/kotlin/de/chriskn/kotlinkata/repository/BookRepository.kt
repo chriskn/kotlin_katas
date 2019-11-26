@@ -7,10 +7,6 @@ class BookRepository : IBookRepository {
 
     var library: MutableList<Book> = ArrayList()
 
-    init {
-        library.add(Book("Miller", "A Small History Of Kotlin"))
-    }
-
     constructor() {
         library.add(Book("Smith", "Start With Kotlin Today"))
         library.add(Book("Miller", "A Small History Of Kotlin"))

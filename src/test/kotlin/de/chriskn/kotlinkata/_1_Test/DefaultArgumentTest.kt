@@ -1,12 +1,12 @@
 package de.chriskn.kotlinkata._1_Test
 
-import de.chriskn.kotlinkata.repository.`IBookRepository.kt`
+import de.chriskn.kotlinkata.repository.BookRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class DefaultArgumentTest {
 
-    val bookRepository = `IBookRepository.kt`()
+    val bookRepository = BookRepository()
 
     /**
      * Kotlin supports default arguments.

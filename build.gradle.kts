@@ -27,6 +27,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile ("org.jetbrains.kotlin:kotlin-reflect")
     testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("io.mockk:mockk:1.9")
     testCompile("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "junit")
     }
