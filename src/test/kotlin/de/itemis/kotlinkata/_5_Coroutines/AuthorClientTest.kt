@@ -74,10 +74,10 @@ class AuthorClientTest {
      * status code from the asynchronous call for each author id.
      * Uncomment this test and make it pass.
      */
-    @Test
-    fun test_registerForEvents_return_status_codes() {
-        val statusCodes = client.registerForEvents((1..5).toList())
-        assertThat(statusCodes.size).isEqualTo(5)
-    }
+//    @Test
+//    fun test_registerForEvents_return_status_codes() {
+//        val statusCodes = client.registerForEvents((1..5).toList())
+//        assertThat(statusCodes.size).isEqualTo(5)
+//    }
 
 }
