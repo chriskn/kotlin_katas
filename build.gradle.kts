@@ -1,11 +1,11 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-group = "de.itemis"
+group = "de.codecentric"
 version = "0.0.1-SNAPSHOT"
 
 plugins {
-    val kotlinVersion = "1.3.11"
-    val springVersion = "2.1.1.RELEASE"
+    val kotlinVersion = "1.3.60"
+    val springVersion = "2.2.1.RELEASE"
     id("org.springframework.boot") version springVersion
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
@@ -24,7 +24,7 @@ val test by tasks.getting(Test::class) {
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib") // Required for Kotlin integration
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile(group = "org.jetbrains.kotlinx", name= "kotlinx-coroutines-core", version= "1.1.0") // Required for coroutines
+    compile(group = "org.jetbrains.kotlinx", name= "kotlinx-coroutines-core", version= "1.3.2") // Required for coroutines
     testCompile("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "junit")
     }
