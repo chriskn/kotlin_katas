@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-group = "de.codecentric"
+group = "de.chriskn"
 version = "0.0.1-SNAPSHOT"
 
 plugins {
