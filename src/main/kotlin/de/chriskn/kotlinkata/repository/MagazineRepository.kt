@@ -2,9 +2,9 @@ package de.chriskn.kotlinkata.repository
 
 import de.chriskn.kotlinkata.domain.Book
 
-class MagazineRepository : BookRepositoryInterface {
+class MagazineRepositoryI : `IBookRepository.kt` {
 
-    val repository = BookRepository()
+    val repository = `IBookRepository.kt`()
 
     override fun findAll(): List<Book> {
         return repository.findAll()
@@ -23,6 +23,6 @@ class MagazineRepository : BookRepositoryInterface {
     }
 
     override fun getName(): String {
-        return "MagazinRepository"
+        return "MagazineRepository"
     }
 }

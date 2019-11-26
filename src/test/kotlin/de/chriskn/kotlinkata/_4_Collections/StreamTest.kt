@@ -1,13 +1,13 @@
 package de.chriskn.kotlinkata._4_Collections
 
 import de.chriskn.kotlinkata.domain.Book
-import de.chriskn.kotlinkata.repository.BookRepository
+import de.chriskn.kotlinkata.repository.`IBookRepository.kt`
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class StreamTest {
 
-    val bookRepository = BookRepository()
+    val bookRepository = `IBookRepository.kt`()
 
     /**
      * Task 1: Try your stream skills

@@ -1,6 +1,6 @@
 package de.chriskn.kotlinkata._1_Test
 
-import de.chriskn.kotlinkata.repository.BookRepository
+import de.chriskn.kotlinkata.repository.`IBookRepository.kt`
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
@@ -17,7 +17,7 @@ class PrimaryConstructorTest {
      */
     @Test
     fun shouldUsePrimaryConstructor() {
-        val repository = BookRepository()
+        val repository = `IBookRepository.kt`()
 
         assertThat(repository.findAll().size).isEqualTo(3)
     }
