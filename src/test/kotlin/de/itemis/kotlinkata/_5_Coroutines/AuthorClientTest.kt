@@ -7,7 +7,7 @@ import kotlin.system.measureTimeMillis
 
 /**
  * For help regarding coroutines @see [https://kotlinlang.org/docs/tutorials/coroutines/coroutines-basic-jvm.html]
- * Make all tests in this class green.
+ * Let all tests in this class pass.
  */
 class AuthorClientTest {
 
