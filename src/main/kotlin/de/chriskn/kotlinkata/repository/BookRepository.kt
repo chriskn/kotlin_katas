@@ -3,11 +3,11 @@ package de.chriskn.kotlinkata.repository
 import de.chriskn.kotlinkata.domain.Book
 
 
-class BookRepository : IBookRepository {
+class BookRepository: IBookRepository {
 
     var library: MutableList<Book> = ArrayList()
 
-    constructor() {
+    constructor(){
         library.add(Book("Smith", "Start With Kotlin Today"))
         library.add(Book("Miller", "A Small History Of Kotlin"))
     }

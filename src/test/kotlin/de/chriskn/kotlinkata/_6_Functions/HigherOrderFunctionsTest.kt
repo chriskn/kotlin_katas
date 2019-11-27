@@ -73,7 +73,7 @@ class HigherOrderFunctionsTest {
         val function = { 10 + 5 }
         val loggingFunctionMock = mockk<(Long) -> Unit>(relaxed = true)
 
-        val result = Util().measureTimeMillis(loggingFunctionMock, function)
+        Util().measureTimeMillis(loggingFunctionMock, function)
 
         verify { loggingFunctionMock.invoke(any()) }
     }
