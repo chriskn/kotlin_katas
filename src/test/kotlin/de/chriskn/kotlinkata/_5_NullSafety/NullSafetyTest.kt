@@ -1,4 +1,4 @@
-package de.chriskn.kotlinkata._4_NullSafety
+package de.chriskn.kotlinkata._5_NullSafety
 
 import de.chriskn.kotlinkata.domain.Book
 import de.chriskn.kotlinkata.repository.LegacyNewspaperRepository

@@ -1,4 +1,4 @@
-package de.chriskn.kotlinkata._6_Functions
+package de.chriskn.kotlinkata._8_Functions
 
 import de.chriskn.kotlinkata.Util
 import de.chriskn.kotlinkata.domain.Book
@@ -16,27 +16,18 @@ import java.math.BigDecimal
  *
  * See https://kotlinlang.org/docs/reference/lambdas.html
  *
- * Task 1:
- * The method [BookPriceCalculatorFactory.getBookPriceCalculator] is a higher order function returning a calculator function.
- * This calculator should return the price of a book depending on if it is a bestseller oder a nonseller.
- * The price of bestseller should be increased by 50% while the price of nonsellers should be decreased by 20%.
- *
- * Your task is to make the first two tests in this class pass by implementing the function body of the getBookPriceCalculator like described.
- * Hint: Have also a look at the very powerfull when expressions Kotlin provides: https://kotlinlang.org/docs/reference/control-flow.html
- *
- *
- * Task 2:
- * The method [Util.measureTimeMillis] is a higher order function accepting two functions as parameters.
- * The first function is a logging function used to log the time needed to execute the second function. The second one is the actual function.
- * The actual function is already called, but the logging function not.
- *
- * Your task is to make the test test_measureTimeMillis_calls_logging_function pass by calling the logging function inside measureTimeMillis.
- * Hint: Use System.currentTimeMillis() to measure the time needed.
  */
 class HigherOrderFunctionsTest {
 
     /**
-     * See Task 1
+     * Task 1:
+     * The method [BookPriceCalculatorFactory.getBookPriceCalculator] is a higher order function returning a calculator function.
+     * This calculator should return the price of a book depending on if it is a bestseller oder a nonseller.
+     * The price of bestseller should be increased by 50% while the price of nonsellers should be decreased by 20%.
+     *
+     * Your task is to make the first two tests in this class pass by implementing the function body of the getBookPriceCalculator like described.
+     * Hint: Have also a look at the very powerfull when expressions Kotlin provides: https://kotlinlang.org/docs/reference/control-flow.html
+     *
      */
     @Test
     fun test_calculator_increases_price_for_bestsellers() {
@@ -56,7 +47,13 @@ class HigherOrderFunctionsTest {
     }
 
     /**
-     * See Task 2
+     * Task 2:
+     * The method [Util.measureTimeMillis] is a higher order function accepting two functions as parameters.
+     * The first function is a logging function used to log the time needed to execute the second function. The second one is the actual function.
+     * The actual function is already called, but the logging function not.
+     *
+     * Your task is to make the test test_measureTimeMillis_calls_logging_function pass by calling the logging function inside measureTimeMillis.
+     * Hint: Use System.currentTimeMillis() to measure the time needed.
      */
     @Test
     fun test_measureTimeMillis_returns_function_value() {

@@ -1,4 +1,4 @@
-package de.chriskn.kotlinkata._7_Coroutines
+package de.chriskn.kotlinkata._9_Coroutines
 
 import de.chriskn.kotlinkata.client.AuthorClient
 import org.assertj.core.api.Assertions.assertThat
@@ -9,7 +9,7 @@ import kotlin.system.measureTimeMillis
  * For help regarding coroutines @see [https://kotlinlang.org/docs/tutorials/coroutines/coroutines-basic-jvm.html]
  * Let all tests in this class pass.
  */
-class AuthorClientTest {
+class CoroutinesTest {
 
     private val client = AuthorClient()
     private val inputIds = (1..100_000).toList()

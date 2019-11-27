@@ -1,4 +1,4 @@
-package de.chriskn.kotlinkata._2_DataClasses
+package de.chriskn.kotlinkata._6_DataClasses
 
 import de.chriskn.kotlinkata.domain.Author
 import de.chriskn.kotlinkata.repository.AuthorRepository

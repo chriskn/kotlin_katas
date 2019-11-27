@@ -1,4 +1,4 @@
-package de.chriskn.kotlinkata._1_Test
+package de.chriskn.kotlinkata._2_DefaultArguments
 
 import de.chriskn.kotlinkata.repository.BookRepository
 import org.assertj.core.api.Assertions.assertThat

@@ -1,4 +1,4 @@
-package de.chriskn.kotlinkata._1_Test
+package de.chriskn.kotlinkata._3_Constructor
 
 import de.chriskn.kotlinkata.domain.Book
 import de.chriskn.kotlinkata.repository.BookRepository
@@ -30,7 +30,7 @@ class ConstructorTest {
      * Task 2:
      *
      * Now your task is to extend the library list with the help of a primary constructor.
-     * Uncomment the test and let it pass without changing it. 
+     * Uncomment the test and let it pass without changing it.
      * Note: Adding a primary constructor with parameter also will lead to changes in the secondary constructor
      *
      */
