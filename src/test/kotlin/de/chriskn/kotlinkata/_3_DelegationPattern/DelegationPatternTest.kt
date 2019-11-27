@@ -1,6 +1,6 @@
 package de.chriskn.kotlinkata._3_DelegationPattern
 
-import de.chriskn.kotlinkata.repository.MagazineRepositoryI
+import de.chriskn.kotlinkata.repository.MagazineRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
@@ -17,7 +17,7 @@ class DelegationPatternTest {
      */
     @Test
     fun shouldReturnMagazineName() {
-        val repository = MagazineRepositoryI()
+        val repository = MagazineRepository()
         assertThat(repository.getName()).isEqualTo("MagazineRepository")
     }
 }

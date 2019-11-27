@@ -10,7 +10,4 @@ class BookPriceCalculatorFactory{
     fun getBookPriceCalculator(type: BookType): (Book) -> BigDecimal {
         return { book -> book.price }
     }
-
-
-
 }

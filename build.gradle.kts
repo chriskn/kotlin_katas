@@ -4,34 +4,26 @@ group = "de.chriskn"
 version = "0.0.1-SNAPSHOT"
 
 plugins {
-    val kotlinVersion = "1.3.60"
-    val springVersion = "2.2.1.RELEASE"
-    id("org.springframework.boot") version springVersion
-    id("org.jetbrains.kotlin.jvm") version kotlinVersion
-    id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
-    id("org.jetbrains.kotlin.plugin.jpa") version kotlinVersion
-    id("io.spring.dependency-management") version "1.0.8.RELEASE"
+    kotlin("jvm") version "1.3.61"
 }
 
 repositories {
     mavenCentral()
 }
 
-val test by tasks.getting(Test::class) {
-    useJUnitPlatform()
-}
-
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2") // Required for coroutines
-    compile("org.jetbrains.kotlin:kotlin-stdlib") // Required for Kotlin integration
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile ("org.jetbrains.kotlin:kotlin-reflect")
-    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    implementation(kotlin("stdlib-jdk8"))
+    testImplementation("org.junit.jupiter:junit-jupiter:5.5.2")
     testImplementation("io.mockk:mockk:1.9")
-    testCompile("org.springframework.boot:spring-boot-starter-test") {
-        exclude(module = "junit")
-    }
-    testCompile("org.assertj:assertj-core")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
-    testRuntimeOnly("org.junit.vintage:junit-vintage-engine")
+    testCompile("org.assertj:assertj-core:3.6.1")
 }
+
+tasks.withType<KotlinCompile>().configureEach {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+val test by tasks.getting(Test::class) {
+        useJUnitPlatform()
+}
+

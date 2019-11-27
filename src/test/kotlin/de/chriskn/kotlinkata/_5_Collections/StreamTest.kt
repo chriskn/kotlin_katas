@@ -1,4 +1,4 @@
-package de.chriskn.kotlinkata._4_Collections
+package de.chriskn.kotlinkata._5_Collections
 
 import de.chriskn.kotlinkata.domain.Book
 import de.chriskn.kotlinkata.repository.BookRepository

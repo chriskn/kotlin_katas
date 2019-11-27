@@ -1,4 +1,4 @@
-package de.chriskn.kotlinkata._5_Functions
+package de.chriskn.kotlinkata._6_Functions
 
 import de.chriskn.kotlinkata.Util
 import de.chriskn.kotlinkata.domain.Book
@@ -8,7 +8,6 @@ import io.mockk.mockk
 import io.mockk.verify
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import org.mockito.ArgumentMatchers.anyLong
 import java.math.BigDecimal
 
 /**
@@ -31,7 +30,7 @@ import java.math.BigDecimal
  * The first function is a logging function used to log the time needed to execute the second function. The second one is the actual function.
  * The actual function is already called, but the logging function not.
  *
- * Your task is to make the test assert_measureTimeMillis_calls_logging_function pass by calling the logging function inside measureTimeMillis.
+ * Your task is to make the test test_measureTimeMillis_calls_logging_function pass by calling the logging function inside measureTimeMillis.
  * Hint: Use System.currentTimeMillis() to measure the time needed.
  */
 class HigherOrderFunctionsTest {
@@ -40,7 +39,7 @@ class HigherOrderFunctionsTest {
      * See Task 1
      */
     @Test
-    fun assert_calculator_increases_price_for_bestsellers() {
+    fun test_calculator_increases_price_for_bestsellers() {
         val calculator = BookPriceCalculatorFactory().getBookPriceCalculator(BookType.BESTSELLER)
         val newPrice = calculator.invoke(Book("", "", BigDecimal(10)))
         assertThat(newPrice).isEqualTo(BigDecimal.valueOf(15.0))
@@ -50,7 +49,7 @@ class HigherOrderFunctionsTest {
      * See Task 1
      */
     @Test
-    fun assert_calculator_decreases_price_for_nonsellers() {
+    fun test_calculator_decreases_price_for_nonsellers() {
         val calculator = BookPriceCalculatorFactory().getBookPriceCalculator(BookType.NONSELLER)
         val newPrice = calculator.invoke(Book("", "", BigDecimal(10)))
         assertThat(newPrice).isEqualTo(BigDecimal.valueOf(8.0))
@@ -60,7 +59,7 @@ class HigherOrderFunctionsTest {
      * See Task 2
      */
     @Test
-    fun assert_measureTimeMillis_returns_function_value() {
+    fun test_measureTimeMillis_returns_function_value() {
         val function = { 10 + 5 }
         val result = Util().measureTimeMillis({}, function)
         assertThat(result).isEqualTo(15)
@@ -70,13 +69,13 @@ class HigherOrderFunctionsTest {
      * See Task 2
      */
     @Test
-    fun assert_measureTimeMillis_calls_logging_function() {
+    fun test_measureTimeMillis_calls_logging_function() {
         val function = { 10 + 5 }
         val loggingFunctionMock = mockk<(Long) -> Unit>(relaxed = true)
 
         val result = Util().measureTimeMillis(loggingFunctionMock, function)
 
-        verify { loggingFunctionMock.invoke(anyLong()) }
+        verify { loggingFunctionMock.invoke(any()) }
     }
 
 }

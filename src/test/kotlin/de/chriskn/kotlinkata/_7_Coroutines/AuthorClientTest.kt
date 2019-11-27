@@ -1,4 +1,4 @@
-package de.chriskn.kotlinkata._6_Coroutines
+package de.chriskn.kotlinkata._7_Coroutines
 
 import de.chriskn.kotlinkata.client.AuthorClient
 import org.assertj.core.api.Assertions.assertThat

@@ -2,7 +2,7 @@ package de.chriskn.kotlinkata.repository
 
 import de.chriskn.kotlinkata.domain.Book
 
-class MagazineRepositoryI : IBookRepository {
+class MagazineRepository : IBookRepository {
 
     val repository = BookRepository()
 
