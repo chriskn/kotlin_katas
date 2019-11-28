@@ -10,7 +10,7 @@ class DefaultArgumentTest {
 
     /**
      * Kotlin supports default arguments.
-     * Extend the function [de.itemis.kotlinkata.repository.BookRepository.findLimitBooks]
+     * Extend the function [BookRepository.findLimitBooks]
      * with a default argument in a way that the limit parameter of 1 is not
      * required anymore for this test to pass.
      */
