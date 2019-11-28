@@ -22,10 +22,11 @@ class HigherOrderFunctionsTest {
     /**
      * Task 1:
      * The method [BookPriceCalculatorFactory.getBookPriceCalculator] is a higher order function returning a calculator function.
-     * This calculator should return the price of a book depending on if it is a bestseller oder a nonseller.
-     * The price of bestseller should be increased by 50% while the price of nonsellers should be decreased by 20%.
-     *
+     * This returned calculator should return the price of a book.
+     * Which calculator is returned should depend on if it is a [BookType.BESTSELLER] or a [BookType.NONSELLER].
+     * The calculator for bestsellers should increase the price by 50% while the calculator for nonsellers should decrease the price by 20%.
      * Your task is to make the first two tests in this class pass by implementing the function body of the getBookPriceCalculator like described.
+     *
      * Hint: Have also a look at the when expressions Kotlin provides: https://kotlinlang.org/docs/reference/control-flow.html
      *
      */
@@ -53,7 +54,10 @@ class HigherOrderFunctionsTest {
      * The actual function is already called, but the logging function not.
      *
      * Your task is to make the test test_measureTimeMillis_calls_logging_function pass by calling the logging function inside measureTimeMillis.
+     * The test test_measureTimeMillis_returns_function_value already succeeds. Its only for regression.
+     *
      * Hint: Use System.currentTimeMillis() to measure the time needed.
+     *
      */
     @Test
     fun test_measureTimeMillis_returns_function_value() {

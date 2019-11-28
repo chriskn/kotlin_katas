@@ -1,6 +1,5 @@
-package de.chriskn.kotlinkata._7_Collections
+package de.chriskn.kotlinkata._5_Collections
 
-import de.chriskn.kotlinkata.domain.Book
 import de.chriskn.kotlinkata.repository.BookRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
@@ -11,7 +10,7 @@ class CollectionsTest {
 
     /**
      * Task 1: Try your stream skills
-     * Extend the method [de.itemis.kotlinkata.repository.BookRepository.findByAuthor]
+     * Extend the method [BookRepository.findByAuthor]
      * by using streams.
      *
      * See https://kotlinlang.org/docs/reference/collection-filtering.html
@@ -25,27 +24,18 @@ class CollectionsTest {
 
     /**
      * Task 2: Extended streams
-     * Extend the method [de.itemis.kotlinkata.repository.BookRepository.findAllInOrder]
-     * by using streams to return the books in alphabetic order
+     * Extend the method [BookRepository.findAllInOrder]
+     * by using streams to return the books in alphabetic order by author
      *
      * See https://kotlinlang.org/docs/reference/collection-ordering.html
      */
     @Test
     fun shouldFindAllBooksInAlphabeticOrder() {
-        initBooks()
-
         val books = bookRepository.findAllInOrder()
 
         val titles = books.map { book -> book.title }
         val sortedTitles = listOf("A Small History Of Kotlin", "Start With Kotlin Today")
-        assertThat(titles).isEqualTo(sortedTitles)
-    }
-
-    private fun initBooks() {
-        val library: MutableList<Book> = ArrayList()
-        library.add(Book("Smith", "Start With Kotlin Today"))
-        library.add(Book("Miller", "A Small History Of Kotlin"))
-        bookRepository.library = library
+        assertThat(titles.slice(1..2)).isEqualTo(sortedTitles)
     }
 
 }

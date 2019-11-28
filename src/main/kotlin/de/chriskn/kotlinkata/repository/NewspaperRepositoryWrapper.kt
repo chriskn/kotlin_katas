@@ -5,4 +5,8 @@ import java.util.*
 
 class NewspaperRepositoryWrapper (legacyRepo : ILegacyBookingRepository) : ILegacyBookingRepository by legacyRepo {
 
+    override fun findByAuthor(author: String?): List<Book> {
+       return findAll()?.filter { book -> book?.author == author  } ?: Collections.emptyList()
+    }
+
 }

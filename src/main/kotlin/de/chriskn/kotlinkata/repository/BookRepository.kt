@@ -3,11 +3,13 @@ package de.chriskn.kotlinkata.repository
 import de.chriskn.kotlinkata.domain.Book
 
 
-class BookRepository: IBookRepository {
+class BookRepository(val library : MutableList<Book>): IBookRepository {
 
-    var library: MutableList<Book> = ArrayList()
+    init {
+        library.add(Book("Klaus", "Start With Kotlin Today"))
+    }
 
-    constructor(){
+    constructor() : this(mutableListOf()) {
         library.add(Book("Smith", "Start With Kotlin Today"))
         library.add(Book("Miller", "A Small History Of Kotlin"))
     }
@@ -17,11 +19,11 @@ class BookRepository: IBookRepository {
     }
 
     override fun findByAuthor(author: String): List<Book> {
-        return findAll()
+        return findAll().filter { it.author == author }
     }
 
     override fun findAllInOrder(): List<Book> {
-        return findAll()
+        return findAll().sortedBy { it.author }
     }
 
     override fun findLimitBooks(limit: Int): List<Book> {

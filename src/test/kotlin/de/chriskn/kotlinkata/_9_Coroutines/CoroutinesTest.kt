@@ -6,7 +6,9 @@ import org.junit.jupiter.api.Test
 import kotlin.system.measureTimeMillis
 
 /**
- * For help regarding coroutines @see [https://kotlinlang.org/docs/tutorials/coroutines/coroutines-basic-jvm.html]
+ * For help regarding coroutines
+ * see https://kotlinlang.org/docs/tutorials/coroutines/coroutines-basic-jvm.html
+ * and https://github.com/Kotlin/kotlinx.coroutines/tree/master/docs
  * Let all tests in this class pass.
  */
 class CoroutinesTest {
@@ -23,7 +25,7 @@ class CoroutinesTest {
      * uses [Thread]s and is to slow for our purposes.
      *
      * Your first task is to make [AuthorClient.getAuthorsById] run in under 2 Second for the given ids.
-     * Therefore, use coroutines instead of threads.
+     * Therefore, launch a coroutines instead of using threads.
      */
     @Test
     fun test_getAuthorsById_takes_less_then_2s_for_100k_ids() {
@@ -40,6 +42,7 @@ class CoroutinesTest {
      *
      * Make sure [AuthorClient.getAuthorsById] returns all authors by awaiting the result.
      * Therefore, join all jobs in a blocking block.
+     *
      */
     @Test
     fun test_getAuthorsById_returns_all_authors() {

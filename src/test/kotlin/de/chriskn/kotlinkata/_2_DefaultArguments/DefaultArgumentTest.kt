@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test
 
 class DefaultArgumentTest {
 
-    val bookRepository = BookRepository()
+    private val bookRepository = BookRepository()
 
     /**
      * Kotlin supports default arguments.
@@ -16,7 +16,7 @@ class DefaultArgumentTest {
      */
     @Test
     fun shouldReturnLimitedNumberOfBooks() {
-        var books = bookRepository.findLimitBooks(1)
+        var books = bookRepository.findLimitBooks()
         assertThat(books).hasSize(1)
     }
 
