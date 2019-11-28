@@ -26,7 +26,7 @@ class HigherOrderFunctionsTest {
      * The price of bestseller should be increased by 50% while the price of nonsellers should be decreased by 20%.
      *
      * Your task is to make the first two tests in this class pass by implementing the function body of the getBookPriceCalculator like described.
-     * Hint: Have also a look at the very powerfull when expressions Kotlin provides: https://kotlinlang.org/docs/reference/control-flow.html
+     * Hint: Have also a look at the when expressions Kotlin provides: https://kotlinlang.org/docs/reference/control-flow.html
      *
      */
     @Test
