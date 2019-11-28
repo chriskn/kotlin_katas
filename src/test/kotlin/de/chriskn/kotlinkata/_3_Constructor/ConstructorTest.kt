@@ -1,6 +1,5 @@
 package de.chriskn.kotlinkata._3_Constructor
 
-import de.chriskn.kotlinkata.domain.Book
 import de.chriskn.kotlinkata.repository.BookRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
@@ -18,6 +17,8 @@ class ConstructorTest {
      *
      * Your task is to extend the library list with the help of the init function.
      * Try to make this test pass without changing the constructor() method but rather add an init function.
+     * The title of the new book should start with the letter "x" so it does not effect other tests.
+     * Debug the test and check the order in which the books were added.
      */
     @Test
     fun shouldUseInitFunction() {

@@ -1,4 +1,4 @@
-package de.chriskn.kotlinkata._5_NullSafety
+package de.chriskn.kotlinkata._7_NullSafety
 
 import de.chriskn.kotlinkata.domain.Book
 import de.chriskn.kotlinkata.repository.LegacyNewspaperRepository
@@ -7,7 +7,7 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 /**
- * NullSafety is a great feature of Kotlin and avoid the so called "million dollar mistake".
+ * NullSafety is a great feature of Kotlin and avoids the so called "million dollar mistake".
  * But specially when interacting with java code you have to take care of nullable variables.
  *
  * In this test we test the java method [LegacyNewspaperRepository.findByAuthor].
