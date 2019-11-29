@@ -24,7 +24,7 @@ class DataClassTest {
      */
     @Test
     fun shouldFindAllAuthors() {
-        val authors = repository.findAll()
+        var authors = repository.findAll()
         assertThat(authors.map { it.lastName }).contains("Miller")
     }
 
@@ -41,7 +41,7 @@ class DataClassTest {
     @Test
     fun shouldGiveYouAToStringFunForFree() {
         val authorAsString = "TODO"
-        assertTrue(author.toString() == authorAsString)
+        assertThat(author.toString()).isEqualTo(authorAsString)
     }
 
     /**
