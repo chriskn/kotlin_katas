@@ -41,7 +41,6 @@ class DataClassTest {
     @Test
     fun shouldGiveYouAToStringFunForFree() {
         val authorAsString = "TODO"
-        print(author.toString())
         assertTrue(author.toString() == authorAsString)
     }
 
