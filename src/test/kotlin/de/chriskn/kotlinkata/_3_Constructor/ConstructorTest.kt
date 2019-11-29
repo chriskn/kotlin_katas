@@ -5,7 +5,7 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 /**
- * The BookRepository class currently uses a second constructor
+ * The BookRepository class currently uses a secondary constructor
  * to init the library.
  *
  * For more information see https://kotlinlang.org/docs/reference/classes.html
@@ -17,14 +17,14 @@ class ConstructorTest {
      *
      * Your task is to extend the library list with the help of the init function.
      * Try to make this test pass without changing the constructor() method but rather add an init function.
-     * The title of the new book should start with the letter "x" so it does not effect other tests.
+     * The author of the new book should start with the letter "x" so it does not effect other tests.
      * Debug the test and check the order in which the books were added.
      */
     @Test
     fun shouldUseInitFunction() {
         val repository = BookRepository()
 
-        assertThat(repository.findAll().size).isEqualTo(3)
+        assertThat(repository.findAll()).hasSize(3)
     }
 
     /**
