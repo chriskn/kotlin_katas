@@ -24,7 +24,7 @@ class DataClassTest {
      */
     @Test
     fun shouldFindAllAuthors() {
-        var authors = repository.findAll()
+        val authors = repository.findAll()
         assertThat(authors.map { it.lastName }).contains("Miller")
     }
 
