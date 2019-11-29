@@ -35,7 +35,7 @@ class CollectionsTest {
 
         val titles = books.map { book -> book.title }
         val sortedTitles = listOf("A Small History Of Kotlin", "Start With Kotlin Today")
-        assertThat(titles.slice(1..2)).isEqualTo(sortedTitles)
+        assertThat(titles.slice(0..1)).isEqualTo(sortedTitles)
     }
 
 }
